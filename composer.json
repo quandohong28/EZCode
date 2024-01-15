@@ -1,0 +1,16 @@
+{
+    "name": "vendor/autoload",
+    "description": "MVC Framework",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "quandohong28"
+        }
+    ],
+    "require": {}
+}
