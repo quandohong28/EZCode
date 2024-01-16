@@ -1,8 +1,19 @@
 # MVC-Framework
 
-### `HOW TO RUN`
+### `REQUIREMENT`
+- Installed `php`
 
+- Installed `composer`
+
+
+
+### `STEP 1: INSTALL COMPOSER LIBRARIES`
 ```
+composer install
 composer dump-autoload
+```
+
+### `STEP 2: RUN`
+```
 php -S localhost:8000
 ```
