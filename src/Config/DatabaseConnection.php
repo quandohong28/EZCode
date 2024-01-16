@@ -5,25 +5,29 @@ namespace App\Config;
 use PDO;
 use PDOException;
 
-require_once 'vendor/autoload.php';
 
-class DatabaseConnection extends DatabaseConfig
+class DatabaseConnection
 {
-    private $connection;
+
+    protected $HOST = "localhost";
+    protected $DB_NAME = "assignment1";
+    protected $USER_NAME = "root";
+    protected $PASSWORD = "";
+    protected $connection;
 
     public function __construct()
     {
-        $this->connect();
-    }
-
-    private function connect()
-    {
         try {
-            $this->connection = new PDO("mysql:host=$this->host;dbname=$this->dbname;", $this->username, $this->password);
+            $this->connection = new PDO("mysql:host=$this->HOST;dbname=$this->DB_NAME;", $this->USER_NAME, $this->PASSWORD);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             die("Connection failed: " . $e->getMessage());
         }
+    }
+
+    public function connect()
+    {
+        return $this->connection;
     }
 
     public function query(string $sql, bool $queryAll = true)

@@ -13,6 +13,7 @@ class UserController extends Controller
     {
         $user = new User('users');
         $users = $user->all();
-        // $this->dd($users);
+        $this->dd($users);
+        $this->view('home', ['users' => $users]);
     }
 }

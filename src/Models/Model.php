@@ -14,12 +14,19 @@ class Model
     public function __construct(string $table)
     {
         $this->connection = new DatabaseConnection();
+        $this->connection->connect();
         $this->table = $table;
     }
 
     public function all()
     {
         $sql = "SELECT * FROM $this->table";
+        return $this->connection->query($sql);
+    }
+
+    public function find($id)
+    {
+        $sql = "SELECT * FROM $this->table WHERE id = $id";
         return $this->connection->query($sql);
     }
 }
