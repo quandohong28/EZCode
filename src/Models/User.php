@@ -4,12 +4,18 @@ namespace App\Models;
 
 use App\Models\Model;
 
-require_once 'vendor/autoload.php';
-
 class User extends Model
 {
-    public function __construct(string $table)
+    public string $table = 'users';
+
+    public array $fields = [
+        'name',
+        'email',
+        'password',
+    ];
+
+    public function __construct()
     {
-        parent::__construct($table);
+        parent::__construct();
     }
 }

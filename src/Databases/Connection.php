@@ -1,24 +1,23 @@
 <?php
 
-namespace App\Config;
+namespace App\Databases;
 
 use PDO;
 use PDOException;
 
-
-class DatabaseConnection
+class Connection
 {
 
-    protected $HOST = "localhost";
-    protected $DB_NAME = "assignment1";
-    protected $USER_NAME = "root";
-    protected $PASSWORD = "";
     protected $connection;
 
     public function __construct()
     {
+        $host = env('DB_HOST');
+        $db_name = env('DB_NAME');
+        $username = env('DB_USERNAME');
+        $password = env('DB_PASSWORD');
         try {
-            $this->connection = new PDO("mysql:host=$this->HOST;dbname=$this->DB_NAME;", $this->USER_NAME, $this->PASSWORD);
+            $this->connection = new PDO("mysql:host=$host;dbname=$db_name;", $username, $password);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             die("Connection failed: " . $e->getMessage());

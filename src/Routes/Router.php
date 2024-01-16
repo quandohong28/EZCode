@@ -6,7 +6,7 @@ class Router
 {
     private static $routes = [];
 
-    public static function route(string $route, callable $callback)
+    public static function route(string $route, callable $callback = null)
     {
         self::$routes[$route] = $callback;
     }

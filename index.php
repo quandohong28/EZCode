@@ -1,18 +1,16 @@
 <?php
 
+use App\Routes\Exception;
+use App\Routes\Home;
 use App\Routes\Router;
-use App\Controllers\UserController;
+use App\Routes\User;
 
 require_once 'vendor/autoload.php';
+require_once 'config.php';
 
-Router::route('/', function () {
-    $home = new UserController();
-    $home->index();
-});
-
-Router::route('/404', function () {
-    require_once 'src/Views/404.php';
-});
+User::route();
+Exception::route();
+Home::route();
 
 $current = $_SERVER['REQUEST_URI'];
 Router::run($current);
