@@ -13,7 +13,10 @@
 
 <body>
     <header>
-        <!-- place navbar here -->
+        <div class="d-flex justify-content-end gap-3 pt-3 pe-5">
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        </div>
     </header>
     <main>
         <div class="container d-flex flex-column justify-content-center align-items-center min-vh-100">

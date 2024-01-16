@@ -8,7 +8,7 @@ class Home
 {
     public static function route()
     {
-        Router::route('/', function () {
+        Router::get('/', function () {
             $home = new HomeController();
             $home->index();
         });

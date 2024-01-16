@@ -6,9 +6,18 @@ class Router
 {
     private static $routes = [];
 
-    public static function route(string $route, callable $callback = null)
+    public static function get(string $route, callable $callback = null)
     {
-        self::$routes[$route] = $callback;
+        if ($_SERVER["REQUEST_METHOD"] === "GET") {
+            self::$routes[$route] = $callback;
+        }
+    }
+
+    public static function post(string $route, callable $callback = null)
+    {
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            self::$routes[$route] = $callback;
+        }
     }
 
     public static function run(string $uri)
