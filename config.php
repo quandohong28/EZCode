@@ -45,7 +45,7 @@ function dd()
 {
     $data = func_get_args();
     echo '<div style="background-color: black; color: red; padding: 10px"><pre>';
-    var_dump($data);
+    print_r($data);
     echo '</pre></div>';
     die;
 }

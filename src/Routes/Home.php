@@ -2,7 +2,7 @@
 
 namespace App\Routes;
 
-use App\Controllers\HomeController;
+use App\Controllers\User\HomeController;
 
 class Home
 {

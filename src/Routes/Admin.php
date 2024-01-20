@@ -6,7 +6,7 @@ use App\Controllers\Admin\HomeController;
 
 class Admin
 {
-    private static $routes = [];
+    private static $routes;
 
     public static function route()
     {
@@ -16,7 +16,6 @@ class Admin
         });
 
         Router::get('/admin/action', function () {
-            dd(Admin::$routes['/admin/action']);
         });
     }
 }
