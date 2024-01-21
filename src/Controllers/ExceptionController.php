@@ -9,11 +9,11 @@ class ExceptionController extends Controller
 
     public function notFound()
     {
-        $this->view('errors/404');
+        view('errors/404');
     }
 
     public function notAllowed()
     {
-        $this->view('errors/405');
+        view('errors/405');
     }
 }

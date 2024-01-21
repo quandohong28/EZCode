@@ -49,3 +49,26 @@ function dd()
     echo '</pre></div>';
     die;
 }
+
+function redirect(string $path)
+{
+    header("Location: $path");
+    die;
+}
+
+function view(string $path, array $data = [])
+{
+    $viewPath = "src/views/$path.php";
+
+    if (file_exists($viewPath)) {
+        extract($data);
+        include $viewPath;
+    } else {
+        return redirect('/404');
+    }
+}
+
+function asset($path) {
+    return "/src/views/assets/" . ltrim($path, '/');
+}
+

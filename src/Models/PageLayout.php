@@ -4,36 +4,18 @@ namespace App\Models;
 
 class PageLayout
 {
-    public static function render($role)
+    public static function admin($content)
     {
-        self::header();
-
-        if ($role === 'admin') {
-            self::adminContent();
-        } elseif ($role === 'user') {
-            self::userContent();
-        }
-
-        self::footer();
+        return "pages/admin/$content.php";
     }
 
-    private static function header()
+    public static function user($content)
     {
-        echo "<header><h1>Common Header</h1></header>";
+        return "pages/user/$content.php";
     }
 
-    private static function adminContent()
+    public static function shared($content)
     {
-        echo "<main><p>Welcome, Admin!</p></main>";
-    }
-
-    private static function userContent()
-    {
-        echo "<main><p>Welcome, User!</p></main>";
-    }
-
-    private static function footer()
-    {
-        echo "<footer><p>Common Footer</p></footer>";
+        return "pages/shared/$content.php";
     }
 }

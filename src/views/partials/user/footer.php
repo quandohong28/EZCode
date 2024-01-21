@@ -5,7 +5,7 @@
             <div class="subscription-form">
                 <h3 class="d-flex align-items-center">
                     <span class="me-1">
-                        <img src="/src/views/assets/img/envelope-outline.svg" alt="Image" class="img-fluid">
+                        <img src="<?= asset('img/envelope-outline.svg')?>" alt="Image" class="img-fluid">
                     </span>
                     <span>Đăng ký nhận thông tin mới nhất từ chúng tôi</span>
                 </h3>

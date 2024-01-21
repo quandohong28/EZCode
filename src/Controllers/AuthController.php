@@ -8,7 +8,7 @@ class AuthController extends Controller
 {
     public function login()
     {
-        $this->view('pages/login');
+        view('pages/login');
     }
 
     public function loginPost()
@@ -19,10 +19,9 @@ class AuthController extends Controller
             'password' => $_POST['password']
         ]);
 
-        if($users) {
+        if ($users) {
             echo 'Login success';
-        }
-        else {
+        } else {
             echo 'Login failed';
         }
     }

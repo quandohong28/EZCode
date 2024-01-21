@@ -31,9 +31,9 @@
         <div class="container-tight py-4">
             <div class="empty">
                 <div class="empty-header">404</div>
-                <p class="empty-title">Oops… You just found an error page</p>
+                <p class="empty-title">Oops… Đã có lỗi xảy ra</p>
                 <p class="empty-subtitle text-secondary">
-                    We are sorry but the page you are looking for was not found
+                    Chúng tôi không thể tìm thấy trang bạn đang tìm kiếm.
                 </p>
                 <div class="empty-action">
                     <a href="./." class="btn btn-primary">
@@ -44,7 +44,7 @@
                             <path d="M5 12l6 6" />
                             <path d="M5 12l6 -6" />
                         </svg>
-                        Take me home
+                        Quay lại trang chủ
                     </a>
                 </div>
             </div>

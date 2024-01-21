@@ -6,7 +6,7 @@ use App\Controllers\Controller;
 use App\Models\Course;
 use App\Models\PageLayout;
 
-class HomeController extends Controller
+class EnrollmentController extends Controller
 {
     public function index()
     {
@@ -20,7 +20,7 @@ class HomeController extends Controller
         ];
 
         view('user', [
-            'content' => PageLayout::user('home'),
+            'content' => PageLayout::user('enrollment'),
             'data' => $data
         ]);
     }

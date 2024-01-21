@@ -6,13 +6,6 @@ class Router
 {
     private static $routes = [];
 
-    public static function get(string $route, callable $callback = null)
-    {
-        if ($_SERVER["REQUEST_METHOD"] === "GET") {
-            self::$routes[$route] = $callback;
-        }
-    }
-
     public static function post(string $route, callable $callback = null)
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -20,20 +13,35 @@ class Router
         }
     }
 
+    public static function get(string $route, callable $callback = null)
+    {
+        if ($_SERVER["REQUEST_METHOD"] === "GET") {
+            $route = rtrim($route, '/');
+            self::$routes[$route] = $callback;
+        }
+    }
+
     public static function run(string $uri)
     {
+        $uri = rtrim($uri, '/');
         $found = false;
+
         foreach (self::$routes as $route => $callback) {
-            if ($route === $uri) {
+            $pattern = str_replace('/', '\/', $route);
+            $pattern = preg_replace('/{[^}]+}/', '([^\/]+)', $pattern);
+
+            if (preg_match("/^{$pattern}$/", $uri, $matches)) {
                 $found = true;
-                $callback();
+
+                $params = array_slice($matches, 1);
+
+                call_user_func_array($callback, $params);
                 break;
             }
         }
 
         if (!$found) {
-            $notFoundCallback = self::$routes["/404"];
-            $notFoundCallback();
+            redirect('/404');
         }
     }
 }

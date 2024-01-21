@@ -31,9 +31,10 @@
         <div class="container-tight py-4">
             <div class="empty">
                 <div class="empty-header">405</div>
-                <p class="empty-title">Oops… You have not permission to access this page</p>
+                <p class="empty-title">Đã có lỗi xảy ra</p>
                 <p class="empty-subtitle text-secondary">
-                    Contact admin for more information
+                    Bạn không có quyền truy cập trang này.
+                    Liên hệ với quản trị viên để được hỗ trợ.
                 </p>
                 <div class="empty-action">
                     <a href="./." class="btn btn-primary">
@@ -44,7 +45,7 @@
                             <path d="M5 12l6 6" />
                             <path d="M5 12l6 -6" />
                         </svg>
-                        Take me home
+                        Quay lại trang chủ
                     </a>
                 </div>
             </div>

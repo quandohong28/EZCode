@@ -4,18 +4,20 @@ namespace App\Models;
 
 use App\Models\Model;
 
-class User extends Model
+class Course extends Model
 {
-    public string $table = 'users';
+    public string $table = 'courses';
 
     public array $fields = [
-        'id',
-        'name',
-        'email',
-        'password',
-        'avatar',
-        'role',
+        'course_name',
+        'description',
+        'type',
+        'price',
         'status',
+        'thumnail',
+        'register',
+        'rate',
+        'category_id',
         'created_at',
         'updated_at',
     ];

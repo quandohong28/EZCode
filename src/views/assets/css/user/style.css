@@ -180,7 +180,7 @@ a.more {
 
 .cover p {
   color: rgba(255, 255, 255, 0.5);
-  margin-botom: 30px;
+  margin-bottom: 30px;
 }
 
 .cover .cover-img-wrap {
@@ -225,7 +225,6 @@ a.more {
   position: absolute;
   width: 255px;
   height: 217px;
-  background-image: url("../images/dots-light.svg");
   background-size: contain;
   background-repeat: no-repeat;
   right: -100px;
@@ -457,7 +456,6 @@ a.more {
 .we-help-section .imgs-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[27];
   grid-template-columns: repeat(27, 1fr);
   position: relative;
 }
@@ -1016,6 +1014,10 @@ textarea {
 
 .text-primary {
   color: #3b5d50 !important;
+}
+
+.bg-primary {
+  background-color: #3b5d50 !important;
 }
 
 .thankyou-icon {
