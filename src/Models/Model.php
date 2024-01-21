@@ -22,13 +22,6 @@ class Model
         return $this->connection->query($sql);
     }
 
-    // public function find($id)
-    // {
-    //     $sql = "SELECT * FROM $this->table WHERE id = $id";
-
-    //     return $this->connection->query($sql);
-    // }
-
     public function find(array $data)
     {
         $sql = "SELECT * FROM $this->table WHERE ";

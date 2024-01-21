@@ -16,7 +16,7 @@ class CourseController extends Controller
     {
         $course = new Course();
         $courses = $course->find([
-            'id' => $id
+            'id' => $id,
         ]);
 
         $data = [
