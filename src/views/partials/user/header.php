@@ -1,20 +1,18 @@
 <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
     <div class="container">
-        <a class="navbar-brand" href="/">Q<span>.</span>Udemy</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <h1 class="navbar-brand">
+            <a href="/">
+                <img src="<?= asset('img/udemy-icon.svg') ?>" height="46">
+            </a>
+        </h1>
 
         <div class="collapse navbar-collapse" id="navbarsFurni">
             <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Khám phá</a>
-                </li>
-                <li><a class="nav-link" href="/enrollment">Khoá học của tôi</a></li>
-                <li><a class="nav-link" href="/teacher">Giảng viên</a></li>
-                <li><a class="nav-link" href="/post">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Khám phá</a></li>
+                <li class="nav-item"><a class="nav-link" href="/enrollment">Khoá học của tôi</a></li>
+                <li class="nav-item"><a class="nav-link" href="/teacher">Giảng viên</a></li>
+                <li class="nav-item"><a class="nav-link" href="/post">Blog</a></li>
             </ul>
 
             <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -25,13 +23,11 @@
                     <ul class="dropdown-menu" aria-labelledby="userDropdown">
                         <li>
                             <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
-                                <i class="fa-solid fa-right-to-bracket fa-fw" style="color: #74C0FC;"></i>
                                 <small>Đăng nhập</small>
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
-                                <i class="fa-solid fa-key fa-fw" style="color: #FFD43B;"></i>
                                 <small>Đăng ký</small>
                             </a>
                         </li>
@@ -187,3 +183,28 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navItems = document.querySelectorAll('.nav-item');
+
+        const activeIndex = localStorage.getItem('activeIndex');
+
+        if (activeIndex !== null) {
+            navItems[activeIndex].classList.add('active');
+        }
+
+        navItems.forEach((item, index) => {
+            const navLink = item.querySelector('.nav-link');
+            navLink.addEventListener('click', () => {
+                navItems.forEach((item) => {
+                    item.classList.remove('active');
+                });
+
+                item.classList.add('active');
+
+                localStorage.setItem('activeIndex', index.toString());
+            });
+        });
+    });
+</script>

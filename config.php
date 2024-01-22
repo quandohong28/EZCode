@@ -68,7 +68,7 @@ function view(string $path, array $data = [])
     }
 }
 
-function asset($path) {
+    function asset($path) {
     return "/src/views/assets/" . ltrim($path, '/');
 }
 

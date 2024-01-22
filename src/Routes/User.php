@@ -7,6 +7,7 @@ use App\Controllers\User\CourseController;
 use App\Controllers\User\HomeController;
 use App\Controllers\User\EnrollmentController;
 use App\Controllers\User\PostController;
+use App\Controllers\User\UserController;
 
 class User
 {
@@ -43,6 +44,8 @@ class User
         });
 
         Router::get('/teacher', function () {
+            $teacher = new UserController();
+            $teacher->teacher();
         });
 
         Router::get('/post', function () {

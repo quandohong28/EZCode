@@ -3,14 +3,15 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\Controller;
+use App\Models\Payment;
 use App\Models\PageLayout;
 
-class HomeController extends Controller
+class PaymentController extends Controller
 {
     public function index()
     {
         return view('admin', [
-            'content' => PageLayout::admin('home'),
+            'content' => PageLayout::admin('payment'),
         ]);
     }
 }

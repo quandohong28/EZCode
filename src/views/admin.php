@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS libraries -->
-    <link href="<?= asset('css/tabler.css')?>" rel="stylesheet" />
-    <link href="<?= asset('css/tabler-flags.css')?>" rel="stylesheet" />
-    <link href="<?= asset('css/tabler-payments.css')?>" rel="stylesheet" />
-    <link href="<?= asset('css/tabler-vendors.css')?>" rel="stylesheet" />
-    <link href="<?= asset('css/demo.css')?>" rel="stylesheet" />
+    <link href="<?= asset('css/tabler.css') ?>" rel="stylesheet" />
+    <link href="<?= asset('css/tabler-flags.css') ?>" rel="stylesheet" />
+    <link href="<?= asset('css/tabler-payments.css') ?>" rel="stylesheet" />
+    <link href="<?= asset('css/tabler-vendors.css') ?>" rel="stylesheet" />
+    <link href="<?= asset('css/demo.css') ?>" rel="stylesheet" />
     <style>
         @import url('https://rsms.me/inter/inter.css');
 
@@ -32,20 +32,19 @@
 </head>
 
 <body>
-    <script src="<?= asset('js/demo-theme.js')?>"></script>
     <header>
         <?php include "partials/admin/header.php" ?>
     </header>
-    <main class="min-vh-100 d-flex justify-content-center align-items-center">
-        <h1>ADMIN PAGE</h1>
+    <main class="container min-vh-100">
+        <?php include $content ?>
     </main>
-    <script src="<?= asset('libs/apexcharts/dist/apexcharts.js')?>" defer></script>
-    <script src="<?= asset('libs/jsvectormap/dist/js/jsvectormap.js')?>" defer></script>
-    <script src="<?= asset('ibs/jsvectormap/dist/maps/world.js')?>l" defer></script>
-    <script src="<?= asset('libs/jsvectormap/dist/maps/world-merc.js')?>" defer></script>
+    <script src="<?= asset('libs/apexcharts/dist/apexcharts.js') ?>" defer></script>
+    <script src="<?= asset('libs/jsvectormap/dist/js/jsvectormap.js') ?>" defer></script>
+    <script src="<?= asset('ibs/jsvectormap/dist/maps/world.js') ?>l" defer></script>
+    <script src="<?= asset('libs/jsvectormap/dist/maps/world-merc.js') ?>" defer></script>
     <!-- Tabler Core -->
-    <script src="<?= asset('js/tabler.js')?>" defer></script>
-    <script src="<?= asset('js/demo.js')?>" defer></script>
+    <script src="<?= asset('js/tabler.js') ?>" defer></script>
+    <script src="<?= asset('js/demo.js') ?>" defer></script>
     <footer>
         <?php include "partials/admin/footer.php" ?>
     </footer>

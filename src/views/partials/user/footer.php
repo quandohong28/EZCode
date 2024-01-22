@@ -5,7 +5,7 @@
             <div class="subscription-form">
                 <h3 class="d-flex align-items-center">
                     <span class="me-1">
-                        <img src="<?= asset('img/envelope-outline.svg')?>" alt="Image" class="img-fluid">
+                        <img src="<?= asset('img/envelope-outline.svg') ?>" alt="Image" class="img-fluid">
                     </span>
                     <span>Đăng ký nhận thông tin mới nhất từ chúng tôi</span>
                 </h3>
@@ -30,8 +30,11 @@
 
     <div class="row g-5 mb-5">
         <div class="col-lg-4">
-            <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Q<span>.</span>Udemy</a></div>
-
+            <h1 class="navbar-brand">
+                <a href="/">
+                    <img src="<?= asset('img/udemy-icon.svg') ?>" height="32">
+                </a>
+            </h1>
             <ul class="list-unstyled custom-social">
                 <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
                 <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
@@ -43,10 +46,16 @@
         <div class="col-lg-8">
             <ul class="list-unstyled d-flex gap-5">
                 <li><a href="#">Khám phá</a></li>
-                <li><a href="#">Danh mục</a></li>
                 <li><a href="#">Khoá học của tôi</a></li>
                 <li><a href="#">Giảng viên</a></li>
                 <li><a href="#">Blog</a></li>
+            </ul>
+            <ul class="list-unstyled d-flex gap-5">
+                <li><a href="#">Laravel</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">NodeJs</a></li>
+                <li><a href="#">Backend</a></li>
+                <li><a href="#">Frontend</a></li>
             </ul>
         </div>
     </div>
