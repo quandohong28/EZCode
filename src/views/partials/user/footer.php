@@ -5,7 +5,7 @@
             <div class="subscription-form">
                 <h3 class="d-flex align-items-center">
                     <span class="me-1">
-                        <img src="<?= asset('img/envelope-outline.svg') ?>" alt="Image" class="img-fluid">
+                        <img src="<?= asset('img/icons/envelope-outline.svg') ?>" alt="Image" class="img-fluid">
                     </span>
                     <span>Đăng ký nhận thông tin mới nhất từ chúng tôi</span>
                 </h3>
@@ -32,7 +32,7 @@
         <div class="col-lg-4">
             <h1 class="navbar-brand">
                 <a href="/">
-                    <img src="<?= asset('img/udemy-icon.svg') ?>" height="32">
+                    <img src="<?= asset('img/icons/logo.svg') ?>" height="32">
                 </a>
             </h1>
             <ul class="list-unstyled custom-social">

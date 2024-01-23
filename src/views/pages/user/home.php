@@ -1,25 +1,28 @@
 <section>
-    <div class="cover">
+    <div class="cover p-3">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-5">
                     <div class="intro-excerpt">
-                        <h1 class="text-warning">IT Mastery</h1>
-                        <h1>Học Nhanh, Hiệu Quả</h1>
-                        <p class="mb-4">Chinh Phục Kiến Thức Mới: Khoá Học Thú Vị Cho Mọi Lứa Tuổi và Ngành Nghề</p>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="cover-img-wrap">
-                        <img src="./src/views/assets/img/course.png" class="img-fluid">
+                        <h1 class="text-light">Udemy</h1>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="product-section">
+    <div class="product-section pt-5">
         <div class="container">
+            <form action="/teacher/search" class="text-end d-flex justify-content-end mb-5" method="get">
+                <div class="col-4">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-primary rounded me-3" type="submit">Tìm kiếm</button>
+                        </div>
+                        <input type="text" class="form-control rounded" placeholder="Laravel">
+                    </div>
+                </div>
+            </form>
             <div class="row mb-5">
                 <div class="col-md-6">
                     <h3 class="section-title fw-bold">Khoá học miễn phí</h3>

@@ -3,7 +3,7 @@
     <div class="container">
         <h1 class="navbar-brand">
             <a href="/">
-                <img src="<?= asset('img/udemy-icon.svg') ?>" height="46">
+                <img src="<?= asset('img/icons/logo.svg') ?>" height="46">
             </a>
         </h1>
 
@@ -18,7 +18,7 @@
             <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                 <li class="dropdown">
                     <a class="nav-link" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="<?= asset('img/user.svg') ?>">
+                        <img src="<?= asset('img/icons/user.svg') ?>">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="userDropdown">
                         <li>

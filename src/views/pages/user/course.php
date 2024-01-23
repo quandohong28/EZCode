@@ -97,7 +97,7 @@ $courses = $data['courses'][0];
             <?php else : ?>
                 <p class="h2 my-4 text-danger">Free</p>
             <?php endif ?>
-            <a href="/checkout/<?= $courses['id']?>" class="btn btn-sm btn-primary mb-3">ĐĂNG KÝ NGAY</a>
+            <a href="/checkout/<?= $courses['id'] ?>" class="btn btn-sm btn-primary mb-3">ĐĂNG KÝ NGAY</a>
             <ul class="list-unstyled">
                 <li>
                     <i class="fa-solid fa-users-line me-3"></i>
